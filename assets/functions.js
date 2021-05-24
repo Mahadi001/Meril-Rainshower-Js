@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    dragft();
     firstAnim();
     fdelay();
     secondAnim();
@@ -12,7 +11,7 @@ function firstAnim(){
 function fdelay(){
     setTimeout(function (){
         $('#fbg').fadeOut();
-    },1200)
+    },2000)
 }
 function secondAnim(){
     setTimeout(function () {
@@ -20,21 +19,21 @@ function secondAnim(){
         $('#leaf').addClass('animate_fadeIn');
         $('#whitebottom').addClass('animate_downToUp');
         $('#logo').addClass('animate_leftToRight');
-    },1500);
+    },2000);
 }
 function secdelay(){
     setTimeout(function (){
         $('#secbg').fadeOut();
-    },3000)
+    },4500)
 }
 function thirdAnim(){
     setTimeout(function () {
         $('#thirdbg').addClass('vis');
-        $('#pack2').addClass('animate_bigtoSmallCenterToLeft');
+        $('#pack2').addClass('animate_CenterToLeft');
         $('#text2').addClass('animate_textLeftToRight');
         $('#whitebottom2').addClass('animate_downToUp');
         $('#logo2').addClass('animate_leftToRight');
-    },3000);
+    },5000);
 }
 
 document.getElementById('fbg').ondragstart = function() { return false; };

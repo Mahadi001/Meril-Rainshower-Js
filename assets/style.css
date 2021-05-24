@@ -14,7 +14,7 @@ body {
 }
 
 #leaf{
-    z-index: 4;
+    z-index: 1;
     position: absolute;
     left: 0;
     top: 0;
@@ -62,18 +62,35 @@ img.abs {
     opacity: 0;
 }
 
-#leaf {
-    z-index: 1;
-}
-
-#punch {
-    z-index: 3;
-}
-
 #pack {
     margin-top: 5%;
     margin-left: 30%;
     z-index: 2;
+}
+
+.rain1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rain 0.2s linear infinite;
+    background-image: url('../assets/rain.png');
+    opacity: 0;
+}
+
+.rain2:before {
+    z-index: 5;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rain 0.4s linear infinite;
+    background-image: url('../assets/rain.png');
+    opacity: 0;
 }
 
 #pack2 {
@@ -99,30 +116,8 @@ img.abs {
     z-index: 2;
 }
 
-#pack.animate__bounceIn,
-#whitebottom.animate__bounceIn,
-#logo.animate__bounceIn,
-#punch.vis,
-#boom.animate__bounceIn {
-    opacity: 1;
-}
-
 ::selection {
     background: transparent;
-}
-
-.cta{
-    display: none;
-    position: absolute;
-    cursor: pointer;
-    z-index: 9;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-.cta.vis{
-    display: block;
 }
 
 
@@ -212,18 +207,8 @@ img.abs {
     animation-name: leftToRight
 }
 
-@keyframes bigtoSmallCenterToLeft {
+@keyframes centerToLeft {
     0% {
-        transform: scale(2.0);
-        opacity: 0;
-        -webkit-transform: scale(2.0);
-    }
-    25% {
-        transform: scale(1.0);
-        opacity: 1;
-        -webkit-transform: scale(1.0);
-    }
-    75% {
         margin-left: 30%;
     }
     100% {
@@ -233,14 +218,14 @@ img.abs {
 }
 
 
-.animate_bigtoSmallCenterToLeft{
-    -webkit-animation-duration: 1.75s;
-    animation-duration: 1.75s;
+.animate_centerToLeft{
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
     animation-timing-function: ease-out;
-    -webkit-animation-duration: calc(var(--animate-duration) * 1.75);
-    animation-duration: calc(var(--animate-duration) * 1.75);
-    -webkit-animation-name: bigtoSmallCenterToLeft;
-    animation-name: bigtoSmallCenterToLeft
+    -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
+    animation-duration: calc(var(--animate-duration) * 0.75);
+    -webkit-animation-name: centerToLeft;
+    animation-name: centerToLeft
 }
 
 
@@ -265,4 +250,16 @@ img.abs {
     -webkit-animation-name: textLeftToRight;
     animation-name: textLeftToRight;
     animation-delay: 0.7s;
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+        opacity: 0.4;
+    }
+
+    100% {
+        background-position: 8% 80%;
+        opacity: 0.4;
+    }
 }
