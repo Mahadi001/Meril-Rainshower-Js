@@ -37,7 +37,6 @@ function thirdAnim(){
     },3000);
 }
 
-document.getElementById('cta').ondragstart = function() { return false; };
 document.getElementById('fbg').ondragstart = function() { return false; };
 document.getElementById('text1').ondragstart = function() { return false; };
 
