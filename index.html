@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/animate.css" />
+</head>
+<body>
+    <div class="screenblock">
+        <div id="fbg">
+            <img id="text1" src="assets/text1.png">
+        </div>
+        <div id="secbg">
+            <img src="assets/bg2.jpg">
+            <img class="abs animate__animated" id="pack" src="assets/Pack.png">
+            <img class="abs animate__animated" id="whitebottom" src="assets/whitebottom.png">
+            <img class="abs animate__animated" id="logo" src="assets/Logo.png">
+            <img class="abs animate__animated" id="leaf" src="assets/leaf.png">
+        </div>
+        <div>
+            <img id="thirdbg" src="assets/bg3.jpg">
+            <img class="abs animate__animated" id="pack2" src="assets/Pack.png">
+            <img class="abs animate__animated" id="whitebottom2" src="assets/whitebottom.png">
+            <img class="abs animate__animated" id="logo2" src="assets/Logo.png">
+            <img class="abs animate__animated" id="text2" src="assets/text2.png">
+        </div>
+    </div>
+    <script src="assets/jquery.min.js"></script>
+<script type="text/javascript">
+    function ctaFunction() {
+        window.open("{CLICK_MACRO}");
+    }
+
+    function _dsptr(e) {
+        var track = new Image();
+        track.src = "{EVENT_URL}" + e;
+    };
+
+    var ft = true;
+
+    function dragft() {
+        if (ft) {
+            ft = false;
+            _dsptr("started");
+        }
+    }
+
+    var ft2 = true;
+    function dragft2() {
+        if (ft2) {
+            ft2 = false;
+            _dsptr("finished");
+        }
+    }
+    </script>
+    <script src="assets/functions.js"></script>
+</body>
+</html>
